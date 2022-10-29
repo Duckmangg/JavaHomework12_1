@@ -20,7 +20,7 @@ public class ProductRepository {
     public Product[] findAll() { return products; }
 
 
-    public void removeById(int id){
+    public Product[] removeById(int id){
         int length = products.length - 1;
         Product[] tmp = new Product[length];
         int index = 0;
@@ -30,5 +30,6 @@ public class ProductRepository {
                 index++;
             }
         }
+        return tmp;
     }
 }
